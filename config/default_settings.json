@@ -1,0 +1,33 @@
+{
+    "backupSettings": {
+        "defaultBackupDirectory": "",
+        "autoBackup": false,
+        "compressBackups": false,
+        "maxBackupCount": 10,
+        "includeHiddenFiles": true,
+        "validateWSLBeforeBackup": true
+    },
+    "systemDetection": {
+        "detectWSL": true,
+        "detectConda": true,
+        "detectOhMyBash": true,
+        "detectOhMyPosh": true
+    },
+    "backupItems": {
+        "windowsSoftware": true,
+        "wslDistributions": true,
+        "condaEnvironments": true,
+        "ohMyBashConfig": true,
+        "ohMyPoshConfig": true,
+        "systemConfigs": true
+    },
+    "advanced": {
+        "backupTimeout": 3600,
+        "useCustomCommands": false,
+        "customCommands": {
+            "wslExport": "wsl --export {distro} {output}",
+            "condaExport": "conda env export --name {env} > {output}",
+            "powershellProfile": "$PROFILE"
+        }
+    }
+}
